@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+}
+
+.header-buttons button:hover {
+    background-color: #404040;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    height: calc(100vh - 70px);
+    background-color: #121212;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(18, 18, 18, 0.85);
+    z-index: 1;
+}
+
+.chat-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.chat-container h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+
+.search-bar::placeholder {
+    color: #888;
+}
+
+.search-bar:focus {
+    border-color: #404040;
+    box-shadow: 0 0 0 2px rgba(64, 64, 64, 0.3);
+}
+ 
